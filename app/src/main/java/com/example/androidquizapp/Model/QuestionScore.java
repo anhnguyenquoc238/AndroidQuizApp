@@ -1,9 +1,11 @@
 package com.example.androidquizapp.Model;
 
 public class QuestionScore {
-    private  String  Question_Score;
+    private String Question_Score;
     private String User;
     private String Score;
+    private String CategoryId;
+    private String CategoryName;
 
     public QuestionScore() {
     }
@@ -12,6 +14,14 @@ public class QuestionScore {
         Question_Score = question_Score;
         User = user;
         Score = score;
+    }
+
+    public QuestionScore(String question_Score, String user, String score, String categoryId, String categoryName) {
+        Question_Score = question_Score;
+        User = user;
+        Score = score;
+        CategoryId = categoryId;
+        CategoryName = categoryName;
     }
 
     public String getQuestion_Score() {
@@ -36,5 +46,21 @@ public class QuestionScore {
 
     public void setScore(String score) {
         Score = score;
+    }
+
+    public String getCategoryId() {
+        return CategoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        CategoryId = categoryId;
+    }
+
+    public String getCategoryName() {
+        return CategoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        CategoryName = categoryName;
     }
 }

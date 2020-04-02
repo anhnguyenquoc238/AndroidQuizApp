@@ -1,5 +1,6 @@
 package com.example.androidquizapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -71,7 +72,7 @@ public class RankingFragment extends Fragment {
                 rankingTbl.orderByChild("score")
                 ) {
             @Override
-            protected void populateViewHolder(RankingViewHolder rankingViewHolder, Ranking ranking, int i) {
+            protected void populateViewHolder(RankingViewHolder rankingViewHolder, final Ranking ranking, int i) {
                 rankingViewHolder.txt_name.setText(ranking.getUserName());
                 rankingViewHolder.txt_score.setText(String.valueOf(ranking.getScore()));
 
@@ -79,7 +80,9 @@ public class RankingFragment extends Fragment {
                 rankingViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-
+                        Intent scoreDetail = new Intent(getActivity(), ScoreDetail.class);
+                        scoreDetail.putExtra("viewUser", ranking.getUserName());
+                        startActivity(scoreDetail);
                     }
                 });
             }
