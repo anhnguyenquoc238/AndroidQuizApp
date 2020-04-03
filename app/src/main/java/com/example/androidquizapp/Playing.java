@@ -81,7 +81,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
 //                    startActivity(intent);
 //                    finish();
                     score+=0;
-                    correctAnswer = 0;
+
                     showQuestion(++index);
                 }
                 txtScore.setText(String.format("%d", score));
