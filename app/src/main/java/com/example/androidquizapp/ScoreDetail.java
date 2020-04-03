@@ -30,7 +30,7 @@ public class ScoreDetail extends AppCompatActivity {
 
         // firebase
         db = FirebaseDatabase.getInstance();
-        questionScore = db.getReference("Question_score");
+        questionScore = db.getReference("Question_Score");
 
         // view
         scoreList = (RecyclerView) findViewById(R.id.scoreList);
@@ -56,9 +56,9 @@ public class ScoreDetail extends AppCompatActivity {
                 questionScore.orderByChild("user").equalTo(viewUser)
         ) {
             @Override
-            protected void populateViewHolder(ScoreDetailViewHolder scoreDetailViewHolder, QuestionScore questionScore, int i) {
-                 scoreDetailViewHolder.txtName.setText(questionScore.getCategoryName());
-                 scoreDetailViewHolder.txtScore.setText(questionScore.getScore());
+            protected void populateViewHolder(ScoreDetailViewHolder scoreDetailViewHolder, QuestionScore score, int i) {
+                scoreDetailViewHolder.txtName.setText(score.getCategoryName());
+                scoreDetailViewHolder.txtScore.setText(String.valueOf(score.getScore()));
             }
         };
 

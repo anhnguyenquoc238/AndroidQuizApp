@@ -12,9 +12,7 @@
         <activity android:name=".ScoreDetail"></activity>
         <activity android:name=".Done" />
         <activity android:name=".Playing" />
-        <activity android:name=".Playting" />
         <activity android:name=".Start" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>

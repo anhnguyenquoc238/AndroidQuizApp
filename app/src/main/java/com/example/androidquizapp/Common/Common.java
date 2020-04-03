@@ -10,5 +10,5 @@ public class Common {
     public static String categoryId, categoryName;
     public static User currentUser;
     //Declare question
-    public static List<Question> questionList =new ArrayList<>();
+    public static List<Question> questionList = new ArrayList<>();
 }

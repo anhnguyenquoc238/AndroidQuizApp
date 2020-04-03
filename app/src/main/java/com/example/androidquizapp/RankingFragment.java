@@ -59,9 +59,8 @@ public class RankingFragment extends Fragment {
             @Override
             public void callBack(Ranking ranking) {
                 //Update to ranking table
-            rankingTbl.child(ranking.getUserName())
-                    .setValue(ranking);
-            //showRanking(); //After upload, sort Ranking table and show result
+                rankingTbl.child(ranking.getUserName()).setValue(ranking);
+                showRanking(); //After upload, sort Ranking table and show result
             }
         });
         //Set adapter
